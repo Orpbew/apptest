@@ -1,0 +1,12 @@
+<h1>EDITER RESTAU</h1>
+
+<%= form_with model: @restaurant do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "vers NEW_restaurants", restaurants_new_path %>
+<%= link_to "vers restaurants", restaurants_path %>
