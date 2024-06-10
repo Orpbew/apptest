@@ -1,0 +1,17 @@
+<h1>ici contact</h1>
+
+<form action="/contact" method="get">
+  <input    type="text" 
+            value="<%= params[:member] %>" 
+            name="member" 
+            placeholder="Who r u loop king for :-) ?">
+  <input type="submit">
+</form>
+
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
+
+<%= link_to "vers index", root_path %>
