@@ -1,8 +1,14 @@
+<title> Ahhhh </title>
 <h1>SHOW</h1>
 <br>
 <h2><%= @restaurant.name %></h2>
 <p><%= @restaurant.rating %></p>
-<br>
+
+<label for="fuel">Rating level:</label>
+
+<meter id="fuel" min="0" max="10" low="3" high="6" optimum="80" value="<%= @restaurant.rating %>">at 50/100</meter>
+
+<hr>
 <%= link_to "Delete",
   restaurant_path(@restaurant),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
