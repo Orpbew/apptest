@@ -10,7 +10,7 @@ Rails.application.routes.draw do
    get "contact", to: "pages#contact"
    get "restaurants", to: "restaurants#index"
    get "restaurants/new", to: "restaurants#new"
-   get "restaurants/:id/edit", to: "restaurants#edit"
+   get "restaurants/:id/edit", to: "restaurants#edit", as: :edit
    get "restaurants/:id", to: "restaurants#show", as: :restaurant
    patch "restaurants/:id", to: "restaurants#update"
    post "restaurants", to: "restaurants#create"

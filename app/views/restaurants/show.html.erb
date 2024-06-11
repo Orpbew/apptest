@@ -1,12 +1,15 @@
 <h1>SHOW</h1>
-
+<br>
 <h2><%= @restaurant.name %></h2>
 <p><%= @restaurant.rating %></p>
-
+<br>
 <%= link_to "Delete",
   restaurant_path(@restaurant),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
-
+<br>
 <%= link_to "vers NEW_restaurants", restaurants_new_path %>
+<br>
 <%= link_to "vers restaurants", restaurants_path %>
+<br>
+<%= link_to "vers édition", edit_path %>
